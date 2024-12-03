@@ -21,7 +21,7 @@ ANDROID_ABI=$(echo "${TARGET}" | grep -Eo ".+-linux-android(eabi)?")
 ANDROID_API=$(echo "${TARGET}" | grep -Eo "[0-9]+$")
 # echo ${TARGET} ${ANDROID_ABI} ${ANDROID_API}
 
-## Some clang dose not support flag -fuse-ld=android
+## Some variant of clang dose not support flag -fuse-ld=android
 set -- \
 	-B "${TOOLCHAIN}/bin" \
 	-resource-dir="${RESOURCE}" \
